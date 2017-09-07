@@ -210,20 +210,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\1.PNG" />
+    <Content Include="Content\images\2.PNG" />
+    <Content Include="Content\images\3.PNG" />
+    <Content Include="Content\images\4.PNG" />
+    <Content Include="Content\images\5.PNG" />
+    <Content Include="Content\images\6.PNG" />
     <Content Include="DBScript\AngularF2BDB.txt" />
-    <Content Include="Content\images\instructions1.JPG" />
-    <Content Include="Content\images\instructions10.JPG" />
-    <Content Include="Content\images\instructions11.JPG" />
-    <Content Include="Content\images\instructions12.JPG" />
-    <Content Include="Content\images\instructions13.JPG" />
-    <Content Include="Content\images\instructions2.JPG" />
-    <Content Include="Content\images\instructions3.JPG" />
-    <Content Include="Content\images\instructions4.JPG" />
-    <Content Include="Content\images\instructions5.JPG" />
-    <Content Include="Content\images\instructions6.JPG" />
-    <Content Include="Content\images\instructions7.JPG" />
-    <Content Include="Content\images\instructions8.JPG" />
-    <Content Include="Content\images\instructions9.JPG" />
     <Content Include="customers\customerDeleteCtrl.js" />
     <Content Include="customers\customerDeleteView.html" />
     <Content Include="customers\customerEditCtrl.js" />
