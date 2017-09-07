@@ -1,0 +1,39 @@
+﻿<h3>
+    {{ title }}
+</h3>
+<hr />
+<form name="customerForm" role="form" style="max-width: 500px;" ng-submit="save(customerForm.$valid)" novalidate>
+    <input type="hidden" ng-model="id" />
+    <strong class="error">{{ error }}</strong>
+    <div class="form-group" ng-class="{'has-error': customerForm.firstname.$invalid && (customerForm.firstname.$dirty || submitted)}">
+        <label for="firstname">First Name*</label>
+        <input type="text" class="form-control" name="firstname" id="firstname" ng-model="firstname" required />
+        <p ng-show="customerForm.firstname.$invalid && (customerForm.firstname.$dirty || submitted)" class="help-block">First Name is required.</p>
+    </div>
+    <div class="form-group" ng-class="{'has-error': customerForm.lastname.$invalid && (customerForm.lastname.$dirty || submitted)}">
+        <label for="lastname">Last Name*</label>
+        <input type="text" class="form-control" name="lastname" id="lastname" ng-model="lastname" required />
+        <p ng-show="customerForm.lastname.$invalid && (customerForm.lastname.$dirty || submitted)"  class="help-block">Last Name is required.</p>
+    </div>
+    <div class="form-group">
+        <label for="middletname">Middle Name</label>
+        <input type="text" class="form-control" id="lastname" ng-model="middlename" />
+    </div>
+    <div class="form-group checkbox">
+        <label><input type="checkbox" ng-checked="isactive" ng-model="isactive"/>Active</label>
+    </div>
+    <a href="/customers" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span>  Back to List</a>
+    
+    <!--<button ng-if="IsNew" type="submit" class="btn btn-default" ng-click="save()">
+        Create
+    </button>-->
+    <!--<button ng-if="IsNew" type="submit" ng-disabled="customerForm.$invalid" class="btn btn-default">
+        Create
+    </button>-->
+    <button ng-if="IsNew" type="submit" class="btn btn-default" >
+        Create
+    </button>
+    <button ng-if="!IsNew" type="submit" class="btn btn-default" ng-click="save()">
+        Save
+    </button>
+</form>  

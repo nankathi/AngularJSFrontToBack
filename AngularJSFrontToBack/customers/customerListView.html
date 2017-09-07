@@ -1,0 +1,40 @@
+﻿<!--<div>
+    <a href="/create" class="btn">Create New Customer</a>
+</div>-->  
+<div>
+    <a href="/create" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Create New Customer</a>
+</div>
+<br />
+<div class="table-responsive" ng-controller="customerListCtrl">
+    <table class="table table-hover">
+        <tr>
+            
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Middle Name</th>
+            <th>Is Active</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in customers">
+            <td>{{ item.FirstName }}</td>
+            <td>{{ item.LastName }}</td>
+            <td>{{ item.MiddleName }}</td>
+            <td>
+                <!--<span class="label" ng-class="{true:'label-success', false:'label-danger', '':'hidden'}[item.IsActive]">
+                    {{ item.IsActive ? 'Active' : 'In Active' }}
+                </span>-->
+                <!--<label class="btn btn-success active">-->
+                    <input type="checkbox" disabled ng-checked="item.IsActive">
+                    <!--<span class="glyphicon glyphicon-ok"></span>-->
+                <!--</label>-->
+            </td>
+            <td>
+                <a href="/edit/{{item.CustomerID}}" class="btn btn-primary">Edit</a>
+            </td>
+            <td>
+                <a href="/delete/{{item.CustomerID}}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>  
